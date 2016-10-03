@@ -79,6 +79,7 @@ alias gf='git fetch'
 alias gfc='git clone'
 alias gfm='git pull'
 alias gfr='git pull --rebase'
+alias gfp='git pull --prune'
 
 # Grep (g)
 alias gg='git grep'
@@ -117,6 +118,7 @@ alias gmt='git mergetool'
 
 # Push (p)
 alias gp='git push'
+alias gph='git push origin HEAD'
 alias gpf='git push --force'
 alias gpa='git push --all'
 alias gpA='git push --all && git push --tags'
@@ -127,7 +129,7 @@ alias gpp='git pull origin "$(git-branch-current 2> /dev/null)" && git push orig
 # Rebase (r)
 alias gr='git rebase'
 alias gra='git rebase --abort'
-alias grc='git rebase --continue'
+alias grC='git rebase --continue' # conflict with grc command
 alias gri='git rebase --interactive'
 alias grs='git rebase --skip'
 
@@ -169,7 +171,7 @@ alias gSu='git submodule foreach git pull origin master'
 alias gSx='git-submodule-remove'
 
 # Working Copy (w)
-alias gws='git status --ignore-submodules=${_git_status_ignore_submodules} --short'
+alias gws='git status --ignore-submodules=${_git_status_ignore_submodules} -sb'
 alias gwS='git status --ignore-submodules=${_git_status_ignore_submodules}'
 alias gwd='git diff --no-ext-diff'
 alias gwD='git diff --no-ext-diff --word-diff'
